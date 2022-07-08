@@ -10,8 +10,8 @@
 	<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 		<Grid Width="298" Height="187">
 			<Button x:Name="myButton" Click="ClickHandler" Content="Click Me" Margin="10,10,0,0" VerticalAlignment="Top"/>
-			<TextBlock x:Name="txtTexto" HorizontalAlignment="Left" Margin="47,78,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="18" Foreground="#FFFF1C1C"/>
-			<TextBox x:Name="txtTextoBoxo" HorizontalAlignment="Left" Margin="47,116,0,0" TextWrapping="Wrap" Text="blablabla" VerticalAlignment="Top"/>
+			<TextBlock x:Name="txtTexto" HorizontalAlignment="Left" Margin="47,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="18" Foreground="#FFFF1C1C" Width="193" Height="31"><Run Text="texto do textblock"/><LineBreak/><Run/></TextBlock>
+			<TextBox x:Name="txtTextoBoxo" HorizontalAlignment="Left" Margin="47,116,0,0" TextWrapping="Wrap" Text="blablabla" VerticalAlignment="Top" Width="195"/>
 		</Grid>
 	</StackPanel>
 </Page>

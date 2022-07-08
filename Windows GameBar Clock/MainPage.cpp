@@ -25,11 +25,17 @@ namespace winrt::Windows_GameBar_Clock::implementation
 
     void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
     {
+        //extern hstring strHora = L"99:99 am"; --extern seria pra variável ser global mas não funcionou se declarada no app.cpp.
+        hstring strHora = L"99:99 am";
+
         myButton().Content(box_value(L"Clicked"));
         winrt::hstring Title = L"Hello";
-        winrt::hstring Content = L"Some cool content!";
+        hstring Content = L"Some cool content!";
         winrt::Windows::UI::Popups::MessageDialog dialog(Content, Title);
         dialog.ShowAsync();
+
+        txtTexto().Text(L"Teste");
+        txtTextoBoxo().Text(strHora);
     }
    
 }
