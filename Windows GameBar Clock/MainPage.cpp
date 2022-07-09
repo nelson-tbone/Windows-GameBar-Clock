@@ -27,26 +27,37 @@ namespace winrt::Windows_GameBar_Clock::implementation
     {
         //extern hstring strHora = L"99:99 am"; --extern seria pra variável ser global mas não funcionou se declarada no app.cpp.
         
+        //txtTexto().Text(L"Teste");
+
         hstring strParte1 = L"parte 1";
         hstring strParte2 = L" Parte 2";
         hstring strParte1Parte2 = strParte1 + L" - " + strParte2;
-        
+        txtTexto().Text(strParte1Parte2);
+
+
         SYSTEMTIME HoraLocal;
         GetLocalTime(&HoraLocal);
+        
         hstring strHora = to_hstring(HoraLocal.wHour);
         hstring strMinuto = to_hstring(HoraLocal.wMinute);
         hstring strHoraLocal = strHora + L':' + strMinuto;
-        //hstring strHoraLocal = "The system time is: %02d:%02d\n" << static_cast<char>(HoraLocal.wHour) << ':' << static_cast<char>(HoraLocal.wMinute);
+
+
+        char teste[100];
+        sprintf_s(teste,"The local time is: %02d:%02d\n", HoraLocal.wHour, HoraLocal.wMinute);
+        strHoraLocal = winrt::to_hstring(teste);
+        
+        //txtTextoBoxo().Text(strHoraLocal);
+        //hstring testestring = to_string(teste);
+        txtTextoBoxo().Text(strHoraLocal);
+
 
         myButton().Content(box_value(L"Clicked"));
         winrt::hstring Title = L"Título da mensagem";
         hstring Content = L"Texto da mensagem!";
         winrt::Windows::UI::Popups::MessageDialog dialog(Content, Title);
         dialog.ShowAsync();
-
-        //txtTexto().Text(L"Teste");
-        txtTexto().Text(strParte1Parte2);
-        txtTextoBoxo().Text(strHoraLocal);
+        
     }
    
 }
