@@ -1,3 +1,5 @@
 Arquivo Readme.md.
 
-esse projeto È um simples widged para o XBoxGameBar, sÛ pra eu ter um relÛgio pinado no desktop o tempo inteiro. n„o achei nada pronto ent„o resolvi tentar aprender a fazer um.
+esse projeto √© um simples widged para o XBoxGameBar, s√≥ pra eu ter um rel√≥gio pinado no desktop o tempo inteiro. n√£o achei nada pronto ent√£o resolvi tentar aprender a fazer um.
+
+Essa vers√£o ficou bagun√ßada, eu abandonei o objetivo final e criei uma nova, a v2, isso porque nessa vers√£o tem uns c√≥digos que eu resolvi manter de exemplos.
