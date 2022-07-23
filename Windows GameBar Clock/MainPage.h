@@ -11,7 +11,6 @@ namespace winrt::Windows_GameBar_Clock::implementation
         int32_t MyProperty();
         void MyProperty(int32_t value);
 
-        void ClickHandler(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::RoutedEventArgs const& args);
         void StartTimerAndRegisterHandler();
         void OnTick(IInspectable const& sender, IInspectable const& args);
     };

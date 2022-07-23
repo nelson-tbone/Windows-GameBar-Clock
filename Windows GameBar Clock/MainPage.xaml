@@ -10,17 +10,15 @@
 	<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 		<Grid Width="351" Height="184">
 			<Grid.RowDefinitions>
-				<RowDefinition Height="41*"/>
-				<RowDefinition Height="56*"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="0*"/>
 				<ColumnDefinition Width="0*"/>
-				<ColumnDefinition/>
+				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
-			<Button x:Name="myButton" Click="ClickHandler" Content="Click Me" Grid.ColumnSpan="3" Margin="261,51,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-			<TextBlock x:Name="txtTexto" TextWrapping="Wrap" FontSize="18" Foreground="#FFFF1C1C" Margin="1,0,199,45" Grid.Column="2"><Run Text="texto do textblock"/><LineBreak/><Run/></TextBlock>
-			<TextBox x:Name="txtTextoBoxo" TextWrapping="Wrap" Text="blablabla" Margin="1,38,90,0" Grid.ColumnSpan="3"/>
+			<TextBlock x:Name="lblRelogio" TextWrapping="Wrap" FontSize="18" Foreground="#FFFF1C1C" Margin="1,0,199,45" Grid.Column="2"><Run Text="texto do textblock"/><LineBreak/><Run/></TextBlock>
 		</Grid>
 	</StackPanel>
 </Page>
