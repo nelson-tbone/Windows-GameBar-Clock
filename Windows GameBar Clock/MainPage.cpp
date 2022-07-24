@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 #include "MainPage.h"
 #include "MainPage.g.cpp"
-#include "winrt/Windows.UI.Popups.h" //para a msgbox;
+//#include "winrt/Windows.UI.Popups.h" //para a msgbox;
 
 using namespace winrt;
 using namespace std;
@@ -38,27 +38,37 @@ namespace winrt::Windows_GameBar_Clock::implementation
 
     void MainPage::OnTick(IInspectable const& sender, IInspectable const& args)
     {
+        hstring strAmPm;
         SYSTEMTIME HoraLocal;
-        GetLocalTime(&HoraLocal);
-        hstring strHora = to_hstring(HoraLocal.wHour);
-        hstring strMinuto = to_hstring(HoraLocal.wMinute);
-        hstring strSegundo = to_hstring(HoraLocal.wSecond);
-        hstring strHoraLocal = strHora + L':' + strMinuto + +L':' + strSegundo;
 
-        /* -- aqui tem as tentativas de formatação;
-        SYSTEMTIME HoraLocal;
         GetLocalTime(&HoraLocal);
-        hstring strHora = to_hstring(HoraLocal.wHour);
+        
+        WORD wrdHora = HoraLocal.wHour;
+        if (HoraLocal.wHour >= 12) {
+            strAmPm = L"pm";
+            wrdHora -= 12;
+        }
+        else {
+            strAmPm = L"am";
+        }
+        
+        hstring strHora = to_hstring(wrdHora);
+        if (strHora.size() <= 1) {
+            strHora = '0' + strHora;
+        }
+        
         hstring strMinuto = to_hstring(HoraLocal.wMinute);
-        hstring strHoraLocal = strHora + L':' + strMinuto;
-        //char teste[100];
-        //sprintf_s(teste,"The local time is: %02d:%02d\n", HoraLocal.wHour, HoraLocal.wMinute);
-        //strHoraLocal = winrt::to_hstring(teste);
-         //txtTextoBoxo().Text(strHoraLocal);
-        //hstring testestring = to_string(teste);
-        txtTextoBoxo().Text(strHoraLocal);
-        */
+        if (strMinuto.size() <= 1) {
+            strMinuto = '0' + strMinuto;
+        }
+
+        hstring strSegundo = to_hstring(HoraLocal.wSecond);
+        if (strSegundo.size() <= 1) {
+            strSegundo = '0' + strSegundo;
+        }
+        hstring strHoraLocal = strHora + L':' + strMinuto + L':' + strSegundo + strAmPm;
 
         lblRelogio().Text(strHoraLocal);
+
     }
 }
