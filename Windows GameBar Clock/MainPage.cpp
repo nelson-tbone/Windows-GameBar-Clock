@@ -1,4 +1,4 @@
-﻿#include "pch.h"
+#include "pch.h"
 #include "MainPage.h"
 #include "MainPage.g.cpp"
 //#include "winrt/Windows.UI.Popups.h" //para a msgbox;
@@ -43,6 +43,7 @@ namespace winrt::Windows_GameBar_Clock::implementation
 
         GetLocalTime(&HoraLocal);
         
+        //TODO: tem um erro de lógica aqui, meio dia tá aparecendo como 00;
         WORD wrdHora = HoraLocal.wHour;
         if (HoraLocal.wHour >= 12) {
             strAmPm = L"pm";
