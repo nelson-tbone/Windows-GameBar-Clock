@@ -47,10 +47,15 @@ namespace winrt::Windows_GameBar_Clock::implementation
         WORD wrdHora = HoraLocal.wHour;
         if (HoraLocal.wHour >= 12) {
             strAmPm = L"pm";
-            wrdHora -= 12;
+            if (HoraLocal.wHour > 12) {
+                wrdHora -= 12;
+            }
         }
         else {
             strAmPm = L"am";
+            if (HoraLocal.wHour == 0) {
+                wrdHora = 12;
+            }
         }
         
         hstring strHora = to_hstring(wrdHora);
