@@ -15,7 +15,7 @@
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
-			<TextBlock x:Name="lblRelogio" TextWrapping="Wrap" FontSize="18" Foreground="#FFFF1C1C" Margin="392,9,0,0" Height="25" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FocusVisualSecondaryBrush="#9943DC2D"><Run Text="00:00:00xm"/><LineBreak/><Run/></TextBlock>
+			<TextBlock x:Name="lblRelogio" TextWrapping="Wrap" FontSize="18" Foreground="Yellow" Margin="392,9,0,0" Height="25" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FocusVisualSecondaryBrush="#9943DC2D"><Run Text="00:00:00xm"/><LineBreak/><Run/></TextBlock>
 		</Grid>
 	</StackPanel>
 </Page>
