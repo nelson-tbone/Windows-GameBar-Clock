@@ -12,6 +12,8 @@ using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::UI::Xaml::Navigation;
 using namespace Windows_GameBar_Clock;
 using namespace Windows_GameBar_Clock::implementation;
+using namespace Microsoft::Gaming::XboxGameBar;
+
 
 /// <summary>
 /// Initializes the singleton application object.  This is the first line of authored code
@@ -116,4 +118,50 @@ void App::OnSuspending([[maybe_unused]] IInspectable const& sender, [[maybe_unus
 void App::OnNavigationFailed(IInspectable const&, NavigationFailedEventArgs const& e)
 {
     throw hresult_error(E_FAIL, hstring(L"Failed to load Page ") + e.SourcePageType().Name);
+}
+
+void App::OnActivated(IActivatedEventArgs const& e)
+{
+    XboxGameBarWidgetActivatedEventArgs widgetArgs{ nullptr };
+    if (e.Kind() == ActivationKind::Protocol)
+    {
+        auto protocolArgs = e.try_as<IProtocolActivatedEventArgs>();
+        if (protocolArgs)
+        {
+            const wchar_t* scheme = protocolArgs.Uri().SchemeName().c_str();
+            if (0 == wcscmp(scheme, L"ms-gamebarwidget"))
+            {
+                widgetArgs = e.try_as<XboxGameBarWidgetActivatedEventArgs>();
+            }
+        }
+    }
+    if (widgetArgs)
+    {
+        if (widgetArgs.IsLaunchActivation())
+        {
+            auto rootFrame = Frame();
+            rootFrame.NavigationFailed({ this, &App::OnNavigationFailed });
+            Window::Current().Content(rootFrame);
+
+            // Game Bar Widget activation work here
+            m_MainPage = XboxGameBarWidget(widgetArgs, Window::Current().CoreWindow(), rootFrame);
+            rootFrame.Navigate(xaml_typename<Windows_GameBar_Clock::MainPage>());
+
+            m_MainPageWindowClosedHandlerToken = Window::Current().Closed(
+                { get_weak(), &App::MainPageWindowClosedHandler });
+
+            //talvez precise disso:
+            //Window::Current().Activate();
+        }
+        else
+        {
+            // Repeat activation for this widget. Ignore, or respond to URI payload
+        }
+    }
+}
+
+void App::MainPageWindowClosedHandler(IInspectable const&, IInspectable const&)
+{
+    m_MainPage = nullptr;
+    Window::Current().Closed(m_MainPageWindowClosedHandlerToken);
 }
