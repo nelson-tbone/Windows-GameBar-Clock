@@ -5,20 +5,17 @@
     xmlns:local="using:Windows_GameBar_Clock"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignHeight="195" d:DesignWidth="365.538" HorizontalAlignment="Left" VerticalAlignment="Top">
+    mc:Ignorable="d" d:DesignHeight="360" d:DesignWidth="516" HorizontalAlignment="Left" VerticalAlignment="Top">
 
 	<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-		<Grid Width="351" Height="184">
+		<Grid Width="500" Height="320" Background="#FF966262">
 			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="0*"/>
-				<ColumnDefinition Width="0*"/>
 				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
-			<TextBlock x:Name="lblRelogio" TextWrapping="Wrap" FontSize="18" Foreground="#FFFF1C1C" Margin="1,0,215,36" Grid.Column="2" Height="25" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Text="00:00:00xm"/><LineBreak/><Run/></TextBlock>
+			<TextBlock x:Name="lblRelogio" TextWrapping="Wrap" FontSize="18" Foreground="Yellow" Margin="392,9,0,0" Height="25" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FocusVisualSecondaryBrush="#9943DC2D"><Run Text="00:00:00xm"/><LineBreak/><Run/></TextBlock>
 		</Grid>
 	</StackPanel>
 </Page>
