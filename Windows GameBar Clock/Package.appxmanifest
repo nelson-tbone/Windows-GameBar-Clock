@@ -7,8 +7,8 @@
 	 IgnorableNamespaces="uap uap3 mp">
   <Identity
     Name="18d1700e-ac5b-4247-b190-5094a9e7caeb"
-    Publisher="CN=t-bone"
-    Version="1.0.0.0" />
+    Publisher="CN=NC Sistemas"
+    Version="1.0.1.0" />
   <mp:PhoneIdentity PhoneProductId="18d1700e-ac5b-4247-b190-5094a9e7caeb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
   <Properties>
     <DisplayName>Windows GameBar Clock</DisplayName>
@@ -31,12 +31,12 @@
 			-->
       <uap:VisualElements
 				DisplayName="Windows GameBar Clock"
-				Description="Project for a single clock C++/WinRT Universal Windows Platform (UWP) app"
+				Description="Project for a sinple clock C++/WinRT Universal Windows Platform (UWP) app"
         Square150x150Logo="Assets\Square150x150Logo.png"
 				Square44x44Logo="Assets\Square44x44Logo.png"
 				BackgroundColor="transparent">
         <uap:DefaultTile
-					Wide310x150Logo="Assets\Wide310x150Logo.png">
+					Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
 			</uap:VisualElements>
@@ -58,10 +58,10 @@
 									<Size>
 										<Height>300</Height>
 										<Width>400</Width>
-										<MinHeight>150</MinHeight>
-										<MinWidth>200</MinWidth>
-										<MaxHeight>350</MaxHeight>
-										<MaxWidth>450</MaxWidth>
+										<MinHeight>0</MinHeight>
+										<MinWidth>0</MinWidth>
+										<MaxHeight>320</MaxHeight>
+										<MaxWidth>500</MaxWidth>
 									</Size>
 									<ResizeSupported>
 										<Horizontal>true</Horizontal>
@@ -97,7 +97,4 @@
 			</ProxyStub>
 		</Extension>
 	</Extensions>
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
 </Package>

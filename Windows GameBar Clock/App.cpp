@@ -151,7 +151,7 @@ void App::OnActivated(IActivatedEventArgs const& e)
                 { get_weak(), &App::MainPageWindowClosedHandler });
 
             //talvez precise disso:
-            //Window::Current().Activate();
+            Window::Current().Activate();
         }
         else
         {
