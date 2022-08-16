@@ -43,7 +43,6 @@ namespace winrt::Windows_GameBar_Clock::implementation
 
         GetLocalTime(&HoraLocal);
         
-        //TODO: tem um erro de lógica aqui, meio dia tá aparecendo como 00;
         WORD wrdHora = HoraLocal.wHour;
         if (HoraLocal.wHour >= 12) {
             strAmPm = L"pm";
