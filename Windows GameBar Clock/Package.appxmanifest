@@ -52,7 +52,7 @@
 								Type="Standard">
 								<HomeMenuVisible>true</HomeMenuVisible>
 								<PinningSupported>true</PinningSupported>
-								<SettingsSupported AppExtensionId="YourSettingsExtensionId" />
+								<!--<SettingsSupported AppExtensionId="YourSettingsExtensionId" />-->
 								<Window>
 									<AllowForegroundTransparency>true</AllowForegroundTransparency>
 									<Size>
