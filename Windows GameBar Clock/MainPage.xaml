@@ -10,17 +10,61 @@
 	<!-- Esta sessão grid ou canvas, tanto faz, quando tem um controle só não precisa, 
 		mas quando tem mais de um controle, precisa ter -->
 	<Canvas>
+		
+		<!-- Criando o outline -->
 		<TextBlock
-		x:Name="lblRelogio" 
-		TextWrapping="Wrap" 
-		FontSize="18" 
-		Foreground="Yellow" 
-		Height="25" 
-		FontWeight="Bold" 
-		HorizontalAlignment="Left" 
-		VerticalAlignment="Top">
-		<Run Text="00:00:00xm"/><LineBreak/><Run/>
+			x:Name="lblRelogioOutLn1" 
+			TextWrapping="Wrap" 
+			FontSize="18" 
+			Foreground="Black" 
+			Height="25" 
+			FontWeight="Bold" 
+			Canvas.Top="2" Canvas.Left="2">
+			00:00:00xm
 		</TextBlock>
+		<TextBlock
+			x:Name="lblRelogioOutLn2" 
+			TextWrapping="Wrap" 
+			FontSize="18" 
+			Foreground="Black" 
+			Height="25" 
+			FontWeight="Bold" 
+			Canvas.Top="2" Canvas.Left="4">
+			00:00:00xm
+		</TextBlock>
+		<TextBlock
+			x:Name="lblRelogioOutLn3" 
+			TextWrapping="Wrap" 
+			FontSize="18" 
+			Foreground="Black" 
+			Height="25" 
+			FontWeight="Bold" 
+			Canvas.Top="4" Canvas.Left="2">
+			00:00:00xm
+		</TextBlock>
+		<TextBlock
+			x:Name="lblRelogioOutLn4" 
+			TextWrapping="Wrap" 
+			FontSize="18" 
+			Foreground="Black" 
+			Height="25" 
+			FontWeight="Bold" 
+			Canvas.Top="4" Canvas.Left="4">
+			00:00:00xm
+		</TextBlock>
+
+		<!-- criando o foreground -->
+		<TextBlock
+			x:Name="lblRelogioNumeros" 
+			TextWrapping="Wrap" 
+			FontSize="18" 
+			Foreground="Yellow" 
+			Height="25" 
+			FontWeight="Bold" 
+			Canvas.Top="3" Canvas.Left="3">
+			00:00:00xm
+		</TextBlock>
+
 	</Canvas>
 
 </Page>
