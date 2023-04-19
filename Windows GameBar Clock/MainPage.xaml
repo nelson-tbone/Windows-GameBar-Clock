@@ -5,7 +5,22 @@
     xmlns:local="using:Windows_GameBar_Clock"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="193">
+    mc:Ignorable="d" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="150">
 
-	<TextBlock x:Name="lblRelogio" TextWrapping="Wrap" FontSize="18" Foreground="Yellow" Height="25" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FocusVisualSecondaryBrush="#9943DC2D"><Run Text="00:00:00xm"/><LineBreak/><Run/></TextBlock>
+	<!-- Esta sessão grid ou canvas, tanto faz, quando tem um controle só não precisa, 
+		mas quando tem mais de um controle, precisa ter -->
+	<Canvas>
+		<TextBlock
+		x:Name="lblRelogio" 
+		TextWrapping="Wrap" 
+		FontSize="18" 
+		Foreground="Yellow" 
+		Height="25" 
+		FontWeight="Bold" 
+		HorizontalAlignment="Left" 
+		VerticalAlignment="Top">
+		<Run Text="00:00:00xm"/><LineBreak/><Run/>
+		</TextBlock>
+	</Canvas>
+
 </Page>
