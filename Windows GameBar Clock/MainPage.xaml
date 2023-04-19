@@ -19,7 +19,9 @@
 			Foreground="Black" 
 			Height="25" 
 			FontWeight="Bold" 
-			Canvas.Top="2" Canvas.Left="2">
+			HorizontalAlignment="Left" 
+			VerticalAlignment="Top"
+			Canvas.Top="0" Canvas.Left="0">
 			00:00:00xm
 		</TextBlock>
 		<TextBlock
@@ -29,7 +31,9 @@
 			Foreground="Black" 
 			Height="25" 
 			FontWeight="Bold" 
-			Canvas.Top="2" Canvas.Left="4">
+			HorizontalAlignment="Left" 
+			VerticalAlignment="Top"
+			Canvas.Top="0" Canvas.Left="2">
 			00:00:00xm
 		</TextBlock>
 		<TextBlock
@@ -39,7 +43,9 @@
 			Foreground="Black" 
 			Height="25" 
 			FontWeight="Bold" 
-			Canvas.Top="4" Canvas.Left="2">
+			HorizontalAlignment="Left" 
+			VerticalAlignment="Top"
+			Canvas.Top="2" Canvas.Left="0">
 			00:00:00xm
 		</TextBlock>
 		<TextBlock
@@ -49,7 +55,9 @@
 			Foreground="Black" 
 			Height="25" 
 			FontWeight="Bold" 
-			Canvas.Top="4" Canvas.Left="4">
+			HorizontalAlignment="Left" 
+			VerticalAlignment="Top"
+			Canvas.Top="2" Canvas.Left="2">
 			00:00:00xm
 		</TextBlock>
 
@@ -61,10 +69,27 @@
 			Foreground="Yellow" 
 			Height="25" 
 			FontWeight="Bold" 
-			Canvas.Top="3" Canvas.Left="3">
+			HorizontalAlignment="Left" 
+			VerticalAlignment="Top"
+			Canvas.Top="1" Canvas.Left="1">
 			00:00:00xm
 		</TextBlock>
 
+
+		<!--
+			<TextBlock x:Name="lblRelogio"
+				TextWrapping="Wrap" 
+				FontSize="18" 
+				Foreground="Yellow" 
+				Height="25" 
+				FontWeight="Bold" 
+				HorizontalAlignment="Left" 
+				VerticalAlignment="Top">
+				<Run Text="00:00:00xm"/><LineBreak/><Run/>
+			</TextBlock>
+		-->
+		
+		
 	</Canvas>
 
 </Page>
