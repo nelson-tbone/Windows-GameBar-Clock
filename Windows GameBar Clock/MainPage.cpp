@@ -73,7 +73,11 @@ namespace winrt::Windows_GameBar_Clock::implementation
         }
         hstring strHoraLocal = strHora + L':' + strMinuto + L':' + strSegundo + strAmPm;
 
-        lblRelogio().Text(strHoraLocal);
+        lblRelogioNumeros().Text(strHoraLocal);
+        lblRelogioOutLn1().Text(strHoraLocal);
+        lblRelogioOutLn2().Text(strHoraLocal);
+        lblRelogioOutLn3().Text(strHoraLocal);
+        lblRelogioOutLn4().Text(strHoraLocal);
 
     }
 }
