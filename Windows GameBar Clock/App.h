@@ -16,5 +16,10 @@ namespace winrt::Windows_GameBar_Clock::implementation
     private:
         Microsoft::Gaming::XboxGameBar::XboxGameBarWidget m_MainPage{ nullptr };
         event_token m_MainPageWindowClosedHandlerToken{};
+
+        //todo: tem alguma coisa estranha, que esse branch de settings não deploya.
+        Windows::Storage::ApplicationDataContainer localSettings = Windows::Storage::ApplicationData::Current().LocalSettings();
+        inline static const auto SettingsFonteCor = L"Yellow";
+
     };
 }
