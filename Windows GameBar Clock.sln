@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Windows GameBar Clock Setup", "Windows GameBar Clock Setup\Windows GameBar Clock Setup.vdproj", "{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -46,6 +48,14 @@ Global
 		{446597D4-59D3-43E8-803F-19119AC6B7B0}.Release|x86.ActiveCfg = Release|Win32
 		{446597D4-59D3-43E8-803F-19119AC6B7B0}.Release|x86.Build.0 = Release|Win32
 		{446597D4-59D3-43E8-803F-19119AC6B7B0}.Release|x86.Deploy.0 = Release|Win32
+		{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}.Debug|ARM.ActiveCfg = Debug
+		{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}.Debug|ARM64.ActiveCfg = Debug
+		{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}.Debug|x64.ActiveCfg = Debug
+		{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}.Debug|x86.ActiveCfg = Debug
+		{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}.Release|ARM.ActiveCfg = Release
+		{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}.Release|ARM64.ActiveCfg = Release
+		{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}.Release|x64.ActiveCfg = Release
+		{F17A4BEF-D8C4-4DEF-9E47-2E2A821F16BB}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
